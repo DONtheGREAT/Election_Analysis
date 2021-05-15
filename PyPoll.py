@@ -68,9 +68,13 @@ for candidate_name in candidate_votes:
         # and set the winning candidate equal to the candidates name.
         winning_candidate = candidate_name
 
-    # Print the candidate name and percentage of votes.
-    print(f"{candidate_name}: received {vote_percentage:.1f}% of the vote.")
-
+winning_candidate_summary = (
+    f"-------------------------\n"
+    f"Winner: {winning_candidate}\n"
+    f"Winning Vote Count: {winning_count:,}\n"
+    f"Winning Percentage: {winning_percentage:.1f}%\n"
+    f"-------------------------\n")
+print(winning_candidate_summary)
     
 # Print the candidate list.
 print(candidate_votes)
